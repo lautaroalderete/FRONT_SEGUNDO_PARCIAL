@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya@css/bahunya-0.1.3.css"/>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/getID.js"></script>
     <title>Traer productos por id</title>
 </head>
 <body>
@@ -48,8 +47,25 @@
                 </ul>
                 
             </div>
+
             <h2>Traer productos por id</h2>
-        
+
+            <div class="container-formularioGet" class="crudForm-container">
+                <h3>Consultar producto</h3>
+                <form id="getProduct-form">
+                    <label for="idProd">Id producto</label>
+                    <input type="number" name="idProd" id="idProd">
+
+                    <input type="submit" value="Consultar producto">
+                </form>
+            </div>
+
+            <div id="getId-container">
+                <ul id="getId-list">
+
+                </ul>
+            </div>
+        </section>
     </main>
     
 </body>

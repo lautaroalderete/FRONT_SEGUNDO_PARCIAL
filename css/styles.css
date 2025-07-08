@@ -90,6 +90,11 @@ ul li {
     padding: 0 10px;
 }
 
+.container-formularioGet {
+    display: flex;
+    flex-direction: column;
+}
+
 .tarjeta-producto {
     background-color: #fff;
     color: #111;
