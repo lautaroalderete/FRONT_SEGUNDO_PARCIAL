@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kimeiga/bahunya@css/bahunya-0.1.3.css"/>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/post.js"></script>
     <title>Crear vehiculos</title>
 </head>
 <body>
@@ -49,6 +48,35 @@
                 
             </div>
             <h2>Crear vehiculos</h2>
+            
+            <div id="altaProductos-container" class="crudForm-container">
+                <form id="altaProductos-form" autocomplete="off">
+                    <select name="category" id="categoryProd" required>
+                        <option value="auto">Auto</option>
+                        <option value="moto">Moto</option>
+                    </select>
+
+                    <label for="imagenProd">Imagen</label>
+                    <input type="text" name="image" id="imagenProd" required>
+                    
+                    <label for="nombreProd">Nombre</label>
+                    <input type="text" name="name" id="nombreProd" required>
+
+                    <label for="modeloProd">Modelo</label>
+                    <input type="text" name="model" id="modeloProd" required>
+
+                    <label for="kmProd">KM</label>
+                    <input type="number" name="km" id="kmProd" required>
+
+                    <label for="precioProd">Precio</label>
+                    <input type="number" name="price" id="precioProd" required>
+                    
+                    <input type="submit" value="Crear vehiculo">
+
+                </form>
+
+            </div>
+
             
         
     </main>
