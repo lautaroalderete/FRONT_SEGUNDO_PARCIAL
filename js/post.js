@@ -1,4 +1,5 @@
 let altaProductos_form = document.getElementById("altaProductos-form");
+const url = "http://localhost:3000/api";
 
 altaProductos_form.addEventListener("submit", async(event) => {
     event.preventDefault();
@@ -17,7 +18,7 @@ altaProductos_form.addEventListener("submit", async(event) => {
     }
     
     try {
-       let response = await fetch("http://localhost:3000/vehiculos", {
+       let response = await fetch(`${url}/vehiculos`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

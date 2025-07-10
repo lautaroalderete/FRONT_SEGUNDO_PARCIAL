@@ -1,6 +1,8 @@
+const url = "http://localhost:3000/api";
+
 async function obtenerDatosProductos() {
     try {
-        let respuesta = await fetch("http://localhost:3000/vehiculos")
+        let respuesta = await fetch(`${url}/vehiculos`)
         console.log(respuesta);
         
         let datos = await respuesta.json();

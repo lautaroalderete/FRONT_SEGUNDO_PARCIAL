@@ -1,6 +1,7 @@
 let getId_lista = document.getElementById("getId-list");
 let getProduct_form = document.getElementById("getProduct-form");
 let updateForm_container =  document.getElementById("updateForm-container")
+const url = "http://localhost:3000/api";
 
 getProduct_form.addEventListener("submit", async(event) => {
     event.preventDefault(); //Evitamos el envío por defecto del formulario
@@ -24,7 +25,7 @@ getProduct_form.addEventListener("submit", async(event) => {
             throw new Error("Porfavor ingresa un id de producto valido")
         }
         
-        let response = await fetch(`http://localhost:3000/vehiculos/${idProd}`);
+        let response = await fetch(`${url}/vehiculos/${idProd}`);
 
         //4° Optimización: Manejamos el error en una posible respuesta no exitosa
         if(!response.ok){
@@ -93,7 +94,7 @@ function mostrarProducto(producto){
 
 async function eliminarProducto(id) {
     try {
-        let response = await fetch(`http://localhost:3000/vehiculos/${id}`, {
+        let response = await fetch(`${url}/vehiculos/${id}`, {
             method: "DELETE"
         });
 

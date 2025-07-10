@@ -1,6 +1,7 @@
 let getId_lista = document.getElementById("getId-list");
 let getProduct_form = document.getElementById("getProduct-form");
 let updateForm_container =  document.getElementById("updateForm-container")
+const url = "http://localhost:3000/api";
 
 getProduct_form.addEventListener("submit", async(event) => {
     event.preventDefault(); //Evitamos el envío por defecto del formulario
@@ -21,14 +22,14 @@ getProduct_form.addEventListener("submit", async(event) => {
 
         //3° Optimización: Validación basica
         if(!idProd){
-            throw new Error("Porfavor ingresa un id de producto valido")
+            throw new Error("Porfavor ingrese un id de producto válido.")
         }
         
-        let response = await fetch(`http://localhost:3000/vehiculos/${idProd}`);
+        let response = await fetch(`${url}/vehiculos/${idProd}`);
 
         //4° Optimización: Manejamos el error en una posible respuesta no exitosa
         if(!response.ok){
-            throw new Error("Porfavor ingresa un id de producto valido")
+            throw new Error("Porfavor ingrese un id de producto válido.")
         }
 
         let datos = await response.json();
@@ -146,7 +147,7 @@ async function actualizarProducto(event) {
 
     
     try{
-        let response = await fetch("http://localhost:3000/vehiculos", {
+        let response = await fetch(`${url}/vehiculos`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
