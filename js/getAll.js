@@ -1,3 +1,4 @@
+console.log("Hola")
 let carrito = [];
 
 const carritoGuardado = localStorage.getItem("carrito");
